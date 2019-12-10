@@ -1,27 +1,30 @@
 <template>
   <v-app>
-    <v-container class="bg">
-      <v-card class="mx-auto my-12 pb-5" max-width="374">
-        <v-card-title class="d-flex justify-center">{{question}}</v-card-title>
-        <div class="mx-auto my-2 d-flex justify-center d-flex align-start flex-column">
-          <div class="my-4 mx-auto" v-for="(button,index) in btn" :key="index">
-            <v-btn x-large color="success">{{button}}</v-btn>
+    <v-content class="bg">   
+        <v-card class="mx-3 my-12 pb-5" max-width="374">
+          <v-card-title class="d-flex justify-center py-10">{{question}}</v-card-title>
+          <div class="mx-auto my-2 d-flex justify-center d-flex align-start flex-column">
+            <div class="mx-auto" v-for="(button,index) in btn" :key="index">
+              <v-btn width="230" height="50" rounded class="cyan accent-2 mb-8">{{button}}</v-btn>
+            </div>
           </div>
-        </div>
-      </v-card>
-    </v-container>
+        </v-card>    
+    </v-content>
   </v-app>
 </template>
+
+
 <script>
 
 export default {
   data: function(){
     return {
-    question: 'ボタンを押してね！',
-    btn: ["foo", "boo", "hoge", "fuga"]
+    question: '好きな言語はなんですか？',
+    btn: ["C", "Java","Java script","PHP","ruby"]
     }
   }
 }
+
 </script>
 
 <style>
